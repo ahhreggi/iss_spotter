@@ -18,19 +18,21 @@ Timezone conversions for the datetime information is estimated by default but a 
     ```
 3. Run the app
     ```
-    node index
+    node index2
     ```
-    To specify a timezone, pass a [valid TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) as a command-line argument:
+    NOTE: ```index1.js``` = callback implementation, ```index2.js``` = promise implementation
+
+    To specify a timezone to use when displaying results, pass a [valid TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) as a command-line argument. For example:
     ```
-    node index America/Toronto
+    node index2 America/Toronto
     ```
 
     Sample output:
     ```
     Upcoming ISS flyovers for your location:
-      - Thursday, March 11th 2021 @ 11:30 pm (America/Toronto) for 648 seconds!
-      - Friday, March 12th 2021 @ 1:08 am (America/Toronto) for 605 seconds!
-      - Friday, March 12th 2021 @ 2:46 am (America/Toronto) for 617 seconds!
-      - Friday, March 12th 2021 @ 4:23 am (America/Toronto) for 653 seconds!
-      - Friday, March 12th 2021 @ 6:00 am (America/Toronto) for 550 seconds!
+      - Friday, March 12th, 2021 @ 1:08 am (America/Toronto) for 605 seconds!
+      - Friday, March 12th, 2021 @ 2:46 am (America/Toronto) for 617 seconds!
+      - Friday, March 12th, 2021 @ 4:23 am (America/Toronto) for 653 seconds!
+      - Friday, March 12th, 2021 @ 6:00 am (America/Toronto) for 550 seconds!
+      - Friday, March 12th, 2021 @ 9:07 pm (America/Toronto) for 571 seconds!
     ```

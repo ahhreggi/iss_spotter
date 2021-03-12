@@ -1,3 +1,5 @@
+// ISS Spotter - Callback Implementation
+
 const request = require('request');
 
 /**
@@ -43,7 +45,7 @@ const fetchCoordsByIP = function(ip, callback) {
 
 /**
  * Makes a single API request to retrieve upcoming ISS flyover times for the given coordinates.
- * @param  {object} coords
+ * @param  {{ latitude: Number, longitude: Number }} coords
  *         An object containing latitude and longitude values.
  * @param  {function} callback
  *         A callback function to pass back an error or an array of objects containing flyover data.

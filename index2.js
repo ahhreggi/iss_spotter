@@ -1,6 +1,6 @@
-// ISS Spotter - Callback Implementation
+// ISS Spotter - Promise Implementation
 
-const { nextISSTimesForMyLocation } = require('./iss');
+const { nextISSTimesForMyLocation } = require('./iss_promised');
 const moment = require('moment-timezone');
 let userTimezone = process.argv[2] || moment.tz.guess(); // moment.tz.guess() may be inaccurate!
 
@@ -26,10 +26,10 @@ const printPassTimes = function(passTimes, timezone) {
   }
 };
 
-nextISSTimesForMyLocation((error, passTimes) => {
-  if (error) {
-    return console.log('[ERROR]:', error.message);
-  } else {
+nextISSTimesForMyLocation()
+  .then((passTimes) => {
     printPassTimes(passTimes, userTimezone);
-  }
-});
+  })
+  .catch((error) => {
+    console.log('[ERROR]:', error.message);
+  });
