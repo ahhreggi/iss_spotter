@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ahhreggi/iss_spotter#readme",
   "dependencies": {
+    "moment-timezone": "^0.5.33",
     "request": "^2.88.2"
   }
 }
