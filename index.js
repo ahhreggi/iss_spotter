@@ -17,7 +17,7 @@ const printPassTimes = function(passTimes, timezone) {
   console.log(`Upcoming ISS flyovers for your location:`);
   for (const pass of passTimes) {
     // MomentJS: Convert the given unix time stamp (pass.risetime) and format for the specified timezone
-    const date = moment.unix(pass.risetime).tz(timezone).format('dddd, MMMM Do YYYY @ h:mm a');
+    const date = moment.unix(pass.risetime).tz(timezone).format('dddd, MMMM Do, YYYY @ h:mm a');
     console.log(`  - ${date} (${timezone}) for ${pass.duration} seconds!`);
   }
 };

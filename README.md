@@ -1,11 +1,11 @@
 # ISS Spotter
 
 **ISS Spotter** retrieves date, time, and duration information for the next 5 flyovers of the International Space Station (ISS) for a user's geographical location via 3 API requests that retrieve:
-1. the user's IP address ([ipify.org](https://www.ipify.org/))
-2. geographic coordinates given an IP address (1) ([freegeoip.app](https://freegeoip.app))
+1. The user's IP address ([ipify.org](https://www.ipify.org/))
+2. Geographic coordinates given an IP address (1) ([freegeoip.app](https://freegeoip.app))
 3. ISS flyover data given geographic coordinates (2) ([open-notify.org](http://open-notify.org/))
 
-Timezone conversions for the datetime information is estimated by default but a [valid TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) can be specified via a command-line argument (see **usage**).
+Timezone conversions for the datetime information is estimated by default but a [valid TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) can be specified via a command-line argument (see **usage** below).
 
 ## Installation & Usage
 1. Clone or download this repository
@@ -20,7 +20,7 @@ Timezone conversions for the datetime information is estimated by default but a 
     ```
     node index
     ```
-    To specify timezone, pass a [valid TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) as a command-line argument:
+    To specify a timezone, pass a [valid TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) as a command-line argument:
     ```
     node index America/Toronto
     ```
